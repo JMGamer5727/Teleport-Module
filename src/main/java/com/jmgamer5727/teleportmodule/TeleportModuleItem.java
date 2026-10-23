@@ -31,7 +31,7 @@ public InteractionResult use(
             stack,
             player,
             0.0F,
-            1.5F,
+            2.5F,
             0.0F
         );
     }
