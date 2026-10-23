@@ -8,33 +8,37 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 
 public class TeleportModule implements ModInitializer {
-    public static final String MOD_ID = "teleport_module";
+public static final String MOD_ID = "teleport_module";
 
-    public static final ResourceKey<Item> TELEPORT_MODULE_KEY =
-        ResourceKey.create(
-            BuiltInRegistries.ITEM.key(),
-            Identifier.fromNamespaceAndPath(
-                MOD_ID,
-                "teleport_module"
-            )
-        );
+public static final ResourceKey<Item> TELEPORT_MODULE_KEY =
+    ResourceKey.create(
+        BuiltInRegistries.ITEM.key(),
+        Identifier.fromNamespaceAndPath(
+            MOD_ID,
+            "teleport_module"
+        )
+    );
 
-    public static final Item TELEPORT_MODULE =
-        new TeleportModuleItem(
-            new Item.Properties()
-                .setId(TELEPORT_MODULE_KEY)
-                .stacksTo(16)
-        );
+public static final Item TELEPORT_MODULE =
+    new TeleportModuleItem(
+        new Item.Properties()
+            .setId(TELEPORT_MODULE_KEY)
+            .stacksTo(16)
+    );
 
-    @Override
-    public void onInitialize() {
-        Registry.register(
-            BuiltInRegistries.ITEM,
-            Identifier.fromNamespaceAndPath(
-                MOD_ID,
-                "teleport_module"
-            ),
-            TELEPORT_MODULE
-        );
-    }
+@Override
+public void onInitialize() {
+    // Register the custom projectile during mod startup.
+    TeleportModuleEntities.initialize();
+
+    Registry.register(
+        BuiltInRegistries.ITEM,
+        Identifier.fromNamespaceAndPath(
+            MOD_ID,
+            "teleport_module"
+        ),
+        TELEPORT_MODULE
+    );
+}
+
 }
