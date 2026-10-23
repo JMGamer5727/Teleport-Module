@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "teleport_module",
+  "version": "${version}",
+  "name": "Teleport Module",
+  "description": "A throwable futuristic module that teleports you to where it lands.",
+  "authors": [
+    "JMGamer5727"
+  ],
+  "contact": {
+    "sources": "https://github.com/JMGamer5727/Teleport-Module"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.jmgamer5727.teleportmodule.TeleportModule"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
