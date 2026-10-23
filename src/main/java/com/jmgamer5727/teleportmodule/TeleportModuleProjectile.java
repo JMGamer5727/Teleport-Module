@@ -2,9 +2,11 @@ package com.jmgamer5727.teleportmodule;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Relative;
 import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -12,6 +14,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
+
+import java.util.Set;
 
 public class TeleportModuleProjectile extends ThrowableItemProjectile {
 
@@ -50,7 +54,7 @@ protected void onHit(HitResult hitResult) {
 
     Entity owner = getOwner();
 
-    if (!(owner instanceof net.minecraft.server.level.ServerPlayer player)) {
+    if (!(owner instanceof ServerPlayer player)) {
         discard();
         return;
     }
@@ -78,8 +82,10 @@ protected void onHit(HitResult hitResult) {
         targetX,
         targetY,
         targetZ,
+        Set.of(),
         player.getYRot(),
-        player.getXRot()
+        player.getXRot(),
+        false
     );
 
     discard();
