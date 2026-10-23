@@ -39,4 +39,8 @@ public static final EntityType<TeleportModuleProjectile> TELEPORT_MODULE_PROJECT
 private TeleportModuleEntities() {
 }
 
+public static void initialize() {
+    // Forces the projectile entity to register during mod startup.
+}
+    
 }
