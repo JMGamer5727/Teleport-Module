@@ -91,4 +91,9 @@ protected void onHit(HitResult hitResult) {
     discard();
 }
 
+@Override
+protected double getGravity() {
+    return 0.03;
+}
+
 }
