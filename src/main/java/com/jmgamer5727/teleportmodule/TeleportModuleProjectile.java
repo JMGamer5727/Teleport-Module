@@ -48,14 +48,14 @@ protected Item getDefaultItem() {
 public void tick() {
     super.tick();
 
-    if (!isNoGravity() && !isInGround()) {
-        Vec3 velocity = getDeltaMovement();
-        setDeltaMovement(
-            velocity.x,
-            velocity.y - 0.015,
-            velocity.z
-        );
-    }
+    if (!isNoGravity() && !isRemoved()) {
+    Vec3 velocity = getDeltaMovement();
+    setDeltaMovement(
+        velocity.x,
+        velocity.y - 0.015,
+        velocity.z
+    );
+}
 }
 
 @Override
