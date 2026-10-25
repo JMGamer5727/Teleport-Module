@@ -49,13 +49,14 @@ public void tick() {
     super.tick();
 
     if (!isNoGravity() && !isRemoved()) {
-    Vec3 velocity = getDeltaMovement();
-    setDeltaMovement(
-        velocity.x,
-        velocity.y - 0.015,
-        velocity.z
-    );
-}
+        Vec3 velocity = getDeltaMovement();
+
+        setDeltaMovement(
+            velocity.x,
+            velocity.y - 0.015,
+            velocity.z
+        );
+    }
 }
 
 @Override
@@ -73,6 +74,44 @@ protected void onHit(HitResult hitResult) {
         return;
     }
 
+    // Hitting an entity swaps its position with the thrower's.
+    if (hitResult instanceof EntityHitResult entityHit) {
+        Entity hitEntity = entityHit.getEntity();
+
+        // Don't swap with removed entities or the thrower.
+        if (hitEntity == player || hitEntity.isRemoved()) {
+            discard();
+            return;
+        }
+
+        double playerX = player.getX();
+        double playerY = player.getY();
+        double playerZ = player.getZ();
+
+        double targetX = hitEntity.getX();
+        double targetY = hitEntity.getY();
+        double targetZ = hitEntity.getZ();
+
+        // Move the hit entity to the player's original position.
+        hitEntity.teleportTo(playerX, playerY, playerZ);
+
+        // Move the player to the hit entity's original position.
+        player.teleportTo(
+            serverLevel,
+            targetX,
+            targetY,
+            targetZ,
+            Set.of(),
+            player.getYRot(),
+            player.getXRot(),
+            false
+        );
+
+        discard();
+        return;
+    }
+
+    // Block hits retain the original teleport behavior.
     double targetX = getX();
     double targetY = getY();
     double targetZ = getZ();
@@ -81,14 +120,12 @@ protected void onHit(HitResult hitResult) {
         BlockPos blockPos = blockHit.getBlockPos();
         var direction = blockHit.getDirection();
 
-        targetX = blockPos.getX() + 0.5 + direction.getStepX() * 0.5;
-        targetY = blockPos.getY() + 0.5 + direction.getStepY() * 0.5;
-        targetZ = blockPos.getZ() + 0.5 + direction.getStepZ() * 0.5;
-    } else if (hitResult instanceof EntityHitResult entityHit) {
-        Entity hitEntity = entityHit.getEntity();
-        targetX = hitEntity.getX();
-        targetY = hitEntity.getY();
-        targetZ = hitEntity.getZ();
+        targetX = blockPos.getX() + 0.5
+            + direction.getStepX() * 0.5;
+        targetY = blockPos.getY() + 0.5
+            + direction.getStepY() * 0.5;
+        targetZ = blockPos.getZ() + 0.5
+            + direction.getStepZ() * 0.5;
     }
 
     player.teleportTo(
