@@ -7,8 +7,8 @@
   },
   "elements": [
     {
-      "from": [5, 0, 5],
-      "to": [11, 3, 11],
+      "from": [4, 0, 4],
+      "to": [12, 3, 12],
       "faces": {
         "north": {"uv": [0, 6, 3, 7.5], "texture": "#metal"},
         "south": {"uv": [0, 6, 3, 7.5], "texture": "#metal"},
@@ -31,20 +31,68 @@
       }
     },
     {
-      "from": [6, 4, 6],
-      "to": [10, 12, 10],
+      "from": [5, 4, 5],
+      "to": [11, 5.6, 11],
       "faces": {
-        "north": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
-        "south": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
-        "east": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
-        "west": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
-        "up": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
-        "down": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"}
+        "north": {"texture": "#vortex"},
+        "south": {"texture": "#vortex"},
+        "east": {"texture": "#vortex"},
+        "west": {"texture": "#vortex"},
+        "up": {"texture": "#vortex"},
+        "down": {"texture": "#vortex"}
       }
     },
     {
-      "from": [5, 13, 5],
-      "to": [11, 16, 11],
+      "from": [6, 5.6, 6],
+      "to": [10, 7.2, 10],
+      "faces": {
+        "north": {"texture": "#vortex"},
+        "south": {"texture": "#vortex"},
+        "east": {"texture": "#vortex"},
+        "west": {"texture": "#vortex"},
+        "up": {"texture": "#vortex"},
+        "down": {"texture": "#vortex"}
+      }
+    },
+    {
+      "from": [7, 7.2, 7],
+      "to": [9, 8.8, 9],
+      "faces": {
+        "north": {"texture": "#vortex"},
+        "south": {"texture": "#vortex"},
+        "east": {"texture": "#vortex"},
+        "west": {"texture": "#vortex"},
+        "up": {"texture": "#vortex"},
+        "down": {"texture": "#vortex"}
+      }
+    },
+    {
+      "from": [6, 8.8, 6],
+      "to": [10, 10.4, 10],
+      "faces": {
+        "north": {"texture": "#vortex"},
+        "south": {"texture": "#vortex"},
+        "east": {"texture": "#vortex"},
+        "west": {"texture": "#vortex"},
+        "up": {"texture": "#vortex"},
+        "down": {"texture": "#vortex"}
+      }
+    },
+    {
+      "from": [5, 10.4, 5],
+      "to": [11, 12, 11],
+      "faces": {
+        "north": {"texture": "#vortex"},
+        "south": {"texture": "#vortex"},
+        "east": {"texture": "#vortex"},
+        "west": {"texture": "#vortex"},
+        "up": {"texture": "#vortex"},
+        "down": {"texture": "#vortex"}
+      }
+    },
+    {
+      "from": [4, 13, 4],
+      "to": [12, 16, 12],
       "faces": {
         "north": {"uv": [0, 6, 3, 7.5], "texture": "#metal"},
         "south": {"uv": [0, 6, 3, 7.5], "texture": "#metal"},
