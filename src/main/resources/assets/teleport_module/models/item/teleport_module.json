@@ -34,60 +34,60 @@
       "from": [5, 4, 5],
       "to": [11, 5.6, 11],
       "faces": {
-        "north": {"texture": "#vortex"},
-        "south": {"texture": "#vortex"},
-        "east": {"texture": "#vortex"},
-        "west": {"texture": "#vortex"},
-        "up": {"texture": "#vortex"},
-        "down": {"texture": "#vortex"}
+        "north": {"uv": [0, 8, 7.5, 9.6], "texture": "#vortex"},
+        "south": {"uv": [0, 8, 7.5, 9.6], "texture": "#vortex"},
+        "east": {"uv": [0, 8, 7.5, 9.6], "texture": "#vortex"},
+        "west": {"uv": [0, 8, 7.5, 9.6], "texture": "#vortex"},
+        "up": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
+        "down": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"}
       }
     },
     {
       "from": [6, 5.6, 6],
       "to": [10, 7.2, 10],
       "faces": {
-        "north": {"texture": "#vortex"},
-        "south": {"texture": "#vortex"},
-        "east": {"texture": "#vortex"},
-        "west": {"texture": "#vortex"},
-        "up": {"texture": "#vortex"},
-        "down": {"texture": "#vortex"}
+        "north": {"uv": [0, 9.6, 7.5, 11.2], "texture": "#vortex"},
+        "south": {"uv": [0, 9.6, 7.5, 11.2], "texture": "#vortex"},
+        "east": {"uv": [0, 9.6, 7.5, 11.2], "texture": "#vortex"},
+        "west": {"uv": [0, 9.6, 7.5, 11.2], "texture": "#vortex"},
+        "up": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
+        "down": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"}
       }
     },
     {
       "from": [7, 7.2, 7],
       "to": [9, 8.8, 9],
       "faces": {
-        "north": {"texture": "#vortex"},
-        "south": {"texture": "#vortex"},
-        "east": {"texture": "#vortex"},
-        "west": {"texture": "#vortex"},
-        "up": {"texture": "#vortex"},
-        "down": {"texture": "#vortex"}
+        "north": {"uv": [0, 11.2, 7.5, 12.8], "texture": "#vortex"},
+        "south": {"uv": [0, 11.2, 7.5, 12.8], "texture": "#vortex"},
+        "east": {"uv": [0, 11.2, 7.5, 12.8], "texture": "#vortex"},
+        "west": {"uv": [0, 11.2, 7.5, 12.8], "texture": "#vortex"},
+        "up": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
+        "down": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"}
       }
     },
     {
       "from": [6, 8.8, 6],
       "to": [10, 10.4, 10],
       "faces": {
-        "north": {"texture": "#vortex"},
-        "south": {"texture": "#vortex"},
-        "east": {"texture": "#vortex"},
-        "west": {"texture": "#vortex"},
-        "up": {"texture": "#vortex"},
-        "down": {"texture": "#vortex"}
+        "north": {"uv": [0, 12.8, 7.5, 14.4], "texture": "#vortex"},
+        "south": {"uv": [0, 12.8, 7.5, 14.4], "texture": "#vortex"},
+        "east": {"uv": [0, 12.8, 7.5, 14.4], "texture": "#vortex"},
+        "west": {"uv": [0, 12.8, 7.5, 14.4], "texture": "#vortex"},
+        "up": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
+        "down": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"}
       }
     },
     {
       "from": [5, 10.4, 5],
       "to": [11, 12, 11],
       "faces": {
-        "north": {"texture": "#vortex"},
-        "south": {"texture": "#vortex"},
-        "east": {"texture": "#vortex"},
-        "west": {"texture": "#vortex"},
-        "up": {"texture": "#vortex"},
-        "down": {"texture": "#vortex"}
+        "north": {"uv": [0, 14.4, 7.5, 16], "texture": "#vortex"},
+        "south": {"uv": [0, 14.4, 7.5, 16], "texture": "#vortex"},
+        "east": {"uv": [0, 14.4, 7.5, 16], "texture": "#vortex"},
+        "west": {"uv": [0, 14.4, 7.5, 16], "texture": "#vortex"},
+        "up": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"},
+        "down": {"uv": [0, 8, 7.5, 15.5], "texture": "#vortex"}
       }
     },
     {
