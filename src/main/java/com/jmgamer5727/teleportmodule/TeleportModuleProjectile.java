@@ -55,7 +55,7 @@ public class TeleportModuleProjectile extends ThrowableItemProjectile {
 
             setDeltaMovement(
                 velocity.x,
-                velocity.y - 0.015,
+                velocity.y - 0.02,
                 velocity.z
             );
         }
